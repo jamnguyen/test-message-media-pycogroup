@@ -17,16 +17,11 @@ const Gallery = () => {
     setPage
   } = useGiphy();
 
-  React.useEffect(() => {
-    console.log('trendingImgs', trendingImgs)
-  }, [trendingImgs]);
-
   const onScroll = (e) => {
     const view = e.target;
     // Reach bottom of the gallery
     if(view.scrollTop + view.clientHeight >= view.scrollHeight) {
       if (!isFetching && nextOffset < total - 1) {
-        console.log('setPage', nextOffset)
         setPage({ ...page, offset: nextOffset });
       }
     }
