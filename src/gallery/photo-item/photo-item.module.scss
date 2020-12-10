@@ -1,0 +1,54 @@
+.container {
+  background-color: white;
+  border-radius: .3rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  padding: .6rem;
+  width: calc((100% - 1rem) / 2);
+
+  
+  &:nth-child(odd) {
+    margin-right: 1rem;
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+  
+  .user {
+    display: block;
+    font-weight: bold;
+    margin-top: .6rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: calc((100% - 4rem) / 3);
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    &:not(:nth-child(3n)) {
+      margin-right: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 6rem) / 4);
+
+    &:not(:nth-child(3n)) {
+      margin-right: 0;
+    }
+
+    &:not(:nth-child(4n)) {
+      margin-right: 2rem;
+    }
+  }
+}
