@@ -42,7 +42,7 @@ const Gallery = () => {
           trendingImgs.map((img, index) => (
             <PhotoItem
               key={ `photo-${index}` }
-              user={ img.user?.display_name }
+              user={ img.user }
               src={ img.images.fixed_width.url }
               title={ img.title }
               onClick={ () => setCurrentImg(img) }
